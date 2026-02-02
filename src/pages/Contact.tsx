@@ -7,21 +7,21 @@ const socialLinks = [
   { 
     name: 'LinkedIn', 
     icon: Linkedin, 
-    href: 'https://linkedin.com/company/jodc',
+    href: 'https://www.linkedin.com/company/jodc/',
     color: 'hover:text-[#0A66C2]',
     description: 'Follow us for updates'
   },
   { 
     name: 'Instagram', 
     icon: Instagram, 
-    href: 'https://instagram.com/jodc_jiit',
+    href: 'https://www.instagram.com/jodc128/',
     color: 'hover:text-[#E4405F]',
-    description: '@jodc_jiit'
+    description: '@jodc128'
   },
   { 
     name: 'WhatsApp Group', 
     icon: MessageCircle, 
-    href: 'https://chat.whatsapp.com/jodc',
+    href: 'https://chat.whatsapp.com/HKkAWu264SAF9ydKEQ1UME',
     color: 'hover:text-[#25D366]',
     description: 'Join our community'
   },
@@ -102,24 +102,24 @@ const Contact = () => {
                       JODC Coordinator
                     </p>
                     <motion.a 
-                      href="tel:+919876543210" 
+                      href="tel:+918604899344" 
                       className="flex items-center gap-3 text-muted-foreground hover:text-secondary transition-colors group"
                       whileHover={{ x: 5 }}
                     >
                       <div className="w-10 h-10 rounded-lg bg-muted/50 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
                         <Phone className="w-5 h-5" />
                       </div>
-                      <span>+91 98765 43210</span>
+                      <span>+91 86048 99344</span>
                     </motion.a>
                     <motion.a 
-                      href="mailto:jodc@jiit.ac.in" 
+                      href="mailto:jodccreative@gmail.com" 
                       className="flex items-center gap-3 text-muted-foreground hover:text-secondary transition-colors group"
                       whileHover={{ x: 5 }}
                     >
                       <div className="w-10 h-10 rounded-lg bg-muted/50 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
                         <Mail className="w-5 h-5" />
                       </div>
-                      <span>jodc@jiit.ac.in</span>
+                      <span>jodccreative@gmail.com</span>
                     </motion.a>
                   </div>
                 </div>

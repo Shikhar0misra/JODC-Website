@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { Linkedin, Instagram, MessageCircle, Phone, Mail } from 'lucide-react';
 
 const socialLinks = [
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/jodc' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/jodc_jiit' },
-  { name: 'WhatsApp', icon: MessageCircle, href: 'https://chat.whatsapp.com/jodc' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/jodc/' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/jodc128/' },
+  { name: 'WhatsApp', icon: MessageCircle, href: 'https://chat.whatsapp.com/HKkAWu264SAF9ydKEQ1UME' },
 ];
 
 const Footer = () => {
@@ -55,18 +55,18 @@ const Footer = () => {
             <div className="space-y-3">
               <p className="text-foreground font-medium">JODC Coordinator</p>
               <a 
-                href="tel:+919876543210" 
+                href="tel:+918604899344" 
                 className="flex items-center gap-2 text-muted-foreground hover:text-secondary transition-colors"
               >
                 <Phone size={16} />
-                <span>+91 98765 43210</span>
+                <span>+91 86048 99344</span>
               </a>
               <a 
-                href="mailto:jodc@jiit.ac.in" 
+                href="mailto:jodccreative@gmail.com" 
                 className="flex items-center gap-2 text-muted-foreground hover:text-secondary transition-colors"
               >
                 <Mail size={16} />
-                <span>jodc@jiit.ac.in</span>
+                <span>jodccreative@gmail.com</span>
               </a>
             </div>
           </div>
@@ -78,7 +78,7 @@ const Footer = () => {
             © {new Date().getFullYear()} JODC. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm">
-            Built with 💜 by JODC Tech Team
+            Built by Shikhar Misra
           </p>
         </div>
       </div>
