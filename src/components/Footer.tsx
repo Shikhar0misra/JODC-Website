@@ -12,12 +12,16 @@ const Footer = () => {
     <footer className="relative bg-card border-t border-border/30 py-12">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
+
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="font-heading text-lg font-bold text-primary-foreground">J</span>
-              </div>
+              {/* ✅ REAL LOGO */}
+              <img
+                src="/jodc-logo.png"
+                alt="JODC Logo"
+                className="h-10 w-10 object-contain"
+              />
               <span className="font-heading text-xl font-bold tracking-wider text-foreground">
                 JODC
               </span>
@@ -31,7 +35,9 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h3 className="font-heading text-lg font-bold text-foreground mb-4">CONNECT WITH US</h3>
+            <h3 className="font-heading text-lg font-bold text-foreground mb-4">
+              CONNECT WITH US
+            </h3>
             <div className="flex gap-4">
               {socialLinks.map((link) => (
                 <motion.a
@@ -51,18 +57,20 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-heading text-lg font-bold text-foreground mb-4">COORDINATOR</h3>
+            <h3 className="font-heading text-lg font-bold text-foreground mb-4">
+              COORDINATOR
+            </h3>
             <div className="space-y-3">
               <p className="text-foreground font-medium">JODC Coordinator</p>
-              <a 
-                href="tel:+918604899344" 
+              <a
+                href="tel:+918604899344"
                 className="flex items-center gap-2 text-muted-foreground hover:text-secondary transition-colors"
               >
                 <Phone size={16} />
                 <span>+91 86048 99344</span>
               </a>
-              <a 
-                href="mailto:jodccreative@gmail.com" 
+              <a
+                href="mailto:jodccreative@gmail.com"
                 className="flex items-center gap-2 text-muted-foreground hover:text-secondary transition-colors"
               >
                 <Mail size={16} />
