@@ -20,7 +20,7 @@ const registrationSchema = z.object({
 type RegistrationForm = z.infer<typeof registrationSchema>;
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbz1XEH_x1ceB4n9ftgXwzuHLzkd7vLzK0n7VsWFaEd9an6oVGzyKANPWj7GgjR8lVJeNw/exec';
+  'https://script.google.com/macros/s/AKfycbxDSLfPWPyaHp1XzX_CrxMFA7G_Rl8Q10d5063CAJl6PKYVbteYRvZSZXbQak5l4LIigg/exec';
 
 const Register = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -38,20 +38,18 @@ const Register = () => {
     setIsLoading(true);
 
     try {
-      const payload = {
+      // ✅ FORM-ENCODED PAYLOAD (NO JSON, NO HEADERS)
+      const payload = new URLSearchParams({
         name: data.name,
-        enrollment: data.enrollmentNumber, // 👈 matches backend
+        enrollment: data.enrollmentNumber,
         year: data.year,
         batch: data.batch,
         email: data.email,
-      };
+      });
 
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
+        body: payload,
       });
 
       const result = await response.json();
@@ -65,6 +63,7 @@ const Register = () => {
         title: 'Registration Successful! 🚀',
         description: 'A confirmation email has been sent to your email address.',
       });
+
     } catch (error) {
       toast({
         title: 'Registration Failed',
@@ -101,83 +100,41 @@ const Register = () => {
         <div className="container mx-auto max-w-xl">
           <GlassCard className="p-8">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              {/* Name */}
+
               <div>
                 <label className="block mb-2 font-semibold">Full Name</label>
-                <input
-                  {...register('name')}
-                  className="w-full px-4 py-3 rounded-lg bg-muted/50 border"
-                />
-                {errors.name && (
-                  <p className="text-destructive text-sm mt-1">
-                    {errors.name.message}
-                  </p>
-                )}
+                <input {...register('name')} className="w-full px-4 py-3 rounded-lg bg-muted/50 border" />
+                {errors.name && <p className="text-destructive text-sm mt-1">{errors.name.message}</p>}
               </div>
 
-              {/* Enrollment */}
               <div>
-                <label className="block mb-2 font-semibold">
-                  Enrollment Number
-                </label>
-                <input
-                  {...register('enrollmentNumber')}
-                  className="w-full px-4 py-3 rounded-lg bg-muted/50 border"
-                />
-                {errors.enrollmentNumber && (
-                  <p className="text-destructive text-sm mt-1">
-                    {errors.enrollmentNumber.message}
-                  </p>
-                )}
+                <label className="block mb-2 font-semibold">Enrollment Number</label>
+                <input {...register('enrollmentNumber')} className="w-full px-4 py-3 rounded-lg bg-muted/50 border" />
+                {errors.enrollmentNumber && <p className="text-destructive text-sm mt-1">{errors.enrollmentNumber.message}</p>}
               </div>
 
-              {/* Year */}
               <div>
                 <label className="block mb-2 font-semibold">Year</label>
-                <select
-                  {...register('year')}
-                  className="w-full px-4 py-3 rounded-lg bg-muted/50 border"
-                >
+                <select {...register('year')} className="w-full px-4 py-3 rounded-lg bg-muted/50 border">
                   <option value="">Select Year</option>
                   <option value="1st">1st Year</option>
                   <option value="2nd">2nd Year</option>
                   <option value="3rd">3rd Year</option>
                   <option value="4th">4th Year</option>
                 </select>
-                {errors.year && (
-                  <p className="text-destructive text-sm mt-1">
-                    {errors.year.message}
-                  </p>
-                )}
+                {errors.year && <p className="text-destructive text-sm mt-1">{errors.year.message}</p>}
               </div>
 
-              {/* Batch */}
               <div>
                 <label className="block mb-2 font-semibold">Batch</label>
-                <input
-                  {...register('batch')}
-                  className="w-full px-4 py-3 rounded-lg bg-muted/50 border"
-                />
-                {errors.batch && (
-                  <p className="text-destructive text-sm mt-1">
-                    {errors.batch.message}
-                  </p>
-                )}
+                <input {...register('batch')} className="w-full px-4 py-3 rounded-lg bg-muted/50 border" />
+                {errors.batch && <p className="text-destructive text-sm mt-1">{errors.batch.message}</p>}
               </div>
 
-              {/* Email */}
               <div>
                 <label className="block mb-2 font-semibold">Email</label>
-                <input
-                  type="email"
-                  {...register('email')}
-                  className="w-full px-4 py-3 rounded-lg bg-muted/50 border"
-                />
-                {errors.email && (
-                  <p className="text-destructive text-sm mt-1">
-                    {errors.email.message}
-                  </p>
-                )}
+                <input type="email" {...register('email')} className="w-full px-4 py-3 rounded-lg bg-muted/50 border" />
+                {errors.email && <p className="text-destructive text-sm mt-1">{errors.email.message}</p>}
               </div>
 
               <Button type="submit" size="lg" className="w-full" disabled={isLoading}>
@@ -190,6 +147,7 @@ const Register = () => {
                   'Register'
                 )}
               </Button>
+
             </form>
           </GlassCard>
         </div>
