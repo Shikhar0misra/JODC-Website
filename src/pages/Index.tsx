@@ -204,7 +204,7 @@ const Index = () => {
                 READY TO <span className="text-secondary">CODE</span>?
               </h2>
               <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
-                Join our community of developers and start your journey in open-source development today.
+                Register for our latest event.
               </p>
               <Button href="/events/competitive-programming" size="lg">
                 Register Now

@@ -17,15 +17,16 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
+          
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <motion.div
-              className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
+            <motion.img
+              src="/jodc-logo.png"
+              alt="JODC Logo"
+              className="h-10 w-10 object-contain"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-            >
-              <span className="font-heading text-lg font-bold text-primary-foreground">J</span>
-            </motion.div>
+            />
             <span className="font-heading text-xl font-bold tracking-wider text-foreground group-hover:text-secondary transition-colors">
               JODC
             </span>
@@ -34,16 +35,14 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className="relative group"
-              >
-                <span className={`font-body font-medium text-sm uppercase tracking-wide transition-colors ${
-                  location.pathname === item.path 
-                    ? 'text-secondary' 
-                    : 'text-foreground/80 hover:text-secondary'
-                }`}>
+              <Link key={item.path} to={item.path} className="relative group">
+                <span
+                  className={`font-body font-medium text-sm uppercase tracking-wide transition-colors ${
+                    location.pathname === item.path
+                      ? 'text-secondary'
+                      : 'text-foreground/80 hover:text-secondary'
+                  }`}
+                >
                   {item.name}
                 </span>
                 <motion.div
@@ -85,8 +84,8 @@ const Header = () => {
                   to={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`font-body font-medium text-lg uppercase tracking-wide transition-colors ${
-                    location.pathname === item.path 
-                      ? 'text-secondary' 
+                    location.pathname === item.path
+                      ? 'text-secondary'
                       : 'text-foreground/80 hover:text-secondary'
                   }`}
                 >
