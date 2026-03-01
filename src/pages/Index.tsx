@@ -66,7 +66,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Open Development Committee • Jaypee Institute of Information Technology, Sector 128
+            Open Development Circle • Jaypee Institute of Information Technology, Sector 128
           </motion.p>
 
           <motion.div
@@ -84,17 +84,6 @@ const Index = () => {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/50 flex justify-center pt-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
-          </div>
-        </motion.div>
-      </section>
 
       {/* About Section */}
       <section className="py-20 px-4">
