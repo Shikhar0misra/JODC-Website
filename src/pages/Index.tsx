@@ -7,11 +7,11 @@ import { Code, Users, Rocket, Terminal } from 'lucide-react';
 
 const events = [
   {
-    title: 'Competitive Programming Workshop',
-    description: '2-Day intensive workshop covering CP platforms, LeetCode-style problems, and a skill-testing competition with certificates for all participants.',
-    date: '5th - 6th February',
+    title: 'Hackathon',
+    description: 'A hybrid hackathon organized by JODC where students from both campuses collaborate to build innovative tech solutions and present their prototypes in a competitive final showcase.',
+    date: '12th - 14th March',
     featured: true,
-    href: '/events/competitive-programming',
+    href: '/events/hackathon',
   },
   {
     title: 'Linux Setup Workshop',
@@ -26,10 +26,10 @@ const events = [
     href: '/events/bug-bounty',
   },
   {
-    title: 'Hackathon',
-    description: 'Team-based coding challenge with real-world problem statements focused on innovation-driven development.',
+    title: 'Capture the Flag',
+    description: 'A cybersecurity competition where teams solve challenges and capture flags to score points.',
     date: 'Coming Soon',
-    href: '/events/hackathon',
+    href: '/events/capture-the-flag',
   },
 ];
 
@@ -83,7 +83,7 @@ const Index = () => {
             </Button>
           </motion.div>
         </div>
-
+       </section>
 
       {/* About Section */}
       <section className="py-20 px-4">

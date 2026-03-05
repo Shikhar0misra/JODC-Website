@@ -4,11 +4,11 @@ import EventCard from '@/components/EventCard';
 
 const allEvents = [
   {
-    title: 'Competitive Programming Workshop',
-    description: '2-Day intensive workshop covering CP platforms, LeetCode-style problems, and a skill-testing competition. Day 1 focuses on overview and platforms, Day 2 features the contest with certificates for all participants and momentos for winners.',
-    date: '5th - 6th February',
+    title: 'Hackathon',
+    description: 'A hybrid hackathon organized by JODC where students from both campuses collaborate to build innovative tech solutions and present their prototypes in a competitive final showcase.',
+    date: '12th - 14th March',
     featured: true,
-    href: '/events/competitive-programming',
+    href: '/events/hackathon',
   },
   {
     title: 'Linux Setup Workshop',
@@ -23,8 +23,8 @@ const allEvents = [
     href: '/events/bug-bounty',
   },
   {
-    title: 'Hackathon',
-    description: 'Team-based coding competition with real-world problem statements. Focus on innovation-driven development and building practical solutions.',
+    title: 'Capture the Flag',
+    description: 'Team-based cybersecurity competition with real-world problem statements. Focuses on practical skills in areas like web security, cryptography, and reverse engineering. ',
     date: 'Coming Soon',
     href: '/events/hackathon',
   },

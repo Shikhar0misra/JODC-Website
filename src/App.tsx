@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Events from "./pages/Events";
-import CompetitiveProgramming from "./pages/CompetitiveProgramming";
+import Hackathon from "./pages/Hackathon";
 import ComingSoon from "./pages/ComingSoon";
 import Register from "./pages/Register";
 import Contact from "./pages/Contact";
@@ -22,10 +22,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/events/competitive-programming" element={<CompetitiveProgramming />} />
+          <Route path="/events/Hackathon" element={<Hackathon />} />
           <Route path="/events/linux-workshop" element={<ComingSoon />} />
           <Route path="/events/bug-bounty" element={<ComingSoon />} />
-          <Route path="/events/hackathon" element={<ComingSoon />} />
+          <Route path="/events/capture-the-flag" element={<ComingSoon />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
