@@ -15,7 +15,7 @@ const Layout = ({ children, showAstronaut = true }: LayoutProps) => {
       <StarryBackground />
       {showAstronaut && <FloatingAstronaut />}
       <Header />
-      <main className="flex-1 relative z-10 pt-16 lg:pt-20">
+      <main className="pt-20">
         {children}
       </main>
       <Footer />

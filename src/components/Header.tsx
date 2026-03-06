@@ -34,6 +34,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
+
             {navItems.map((item) => (
               <Link key={item.path} to={item.path} className="relative group">
                 <span
@@ -45,6 +46,7 @@ const Header = () => {
                 >
                   {item.name}
                 </span>
+
                 <motion.div
                   className="absolute -bottom-1 left-0 right-0 h-0.5 bg-secondary"
                   initial={{ scaleX: 0 }}
@@ -55,6 +57,15 @@ const Header = () => {
                 />
               </Link>
             ))}
+
+            {/* Hackathon Register Button */}
+            <Link
+              to="/register"
+              className="ml-4 px-4 py-2 rounded-md bg-secondary text-black font-semibold text-sm uppercase tracking-wide hover:bg-secondary/80 transition"
+            >
+              Register for Hackathon
+            </Link>
+
           </nav>
 
           {/* Mobile Menu Button */}
@@ -78,6 +89,7 @@ const Header = () => {
             className="md:hidden bg-card border-b border-border/50"
           >
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -92,6 +104,16 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+
+              {/* Mobile Register Button */}
+              <Link
+                to="/register"
+                onClick={() => setIsOpen(false)}
+                className="mt-2 px-4 py-2 text-center rounded-md bg-secondary text-black font-semibold uppercase tracking-wide hover:bg-secondary/80 transition"
+              >
+                Register for Hackathon
+              </Link>
+
             </nav>
           </motion.div>
         )}
