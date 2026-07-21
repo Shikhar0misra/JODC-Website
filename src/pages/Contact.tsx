@@ -102,14 +102,14 @@ const Contact = () => {
                       JODC Coordinator
                     </p>
                     <motion.a 
-                      href="tel:+918604899344" 
+                      href="tel:+91 721 780 1967" 
                       className="flex items-center gap-3 text-muted-foreground hover:text-secondary transition-colors group"
                       whileHover={{ x: 5 }}
                     >
                       <div className="w-10 h-10 rounded-lg bg-muted/50 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
                         <Phone className="w-5 h-5" />
                       </div>
-                      <span>+91 86048 99344</span>
+                      <span>+91 721 780 1967</span>
                     </motion.a>
                     <motion.a 
                       href="mailto:jodccreative@gmail.com" 
